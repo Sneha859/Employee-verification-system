@@ -172,22 +172,25 @@ JWT_SECRET=YOUR_SECRET_KEY
 
 # Screenshots
 
-## Login Page
-![alt text](image.png)
+# Screenshots
 
-## Signup Page
-![alt text](image-5.png)
+## Login Page
+![Login Page](login_page.png)
+
+## Signup page
+![Signup](signup.png)
 
 ## Admin Dashboard
-![alt text](image-1.png)
-![alt text](image-2.png)
+![Admin Dashboard](admin_dashboard.png)
+
+
+![Admin Dashboard Table](admin_dashboard_table.png)
 
 ## User Dashboard
-![alt text](image-3.png)
+![User Dashboard](user_dashboard.png)
 
 ## Loading Spinner
-![alt text](image-4.png)
-
+![Loading Spinner](loading_spinner.png)
 ---
 
 # Future Enhancements
