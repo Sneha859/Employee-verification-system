@@ -175,6 +175,9 @@ JWT_SECRET=YOUR_SECRET_KEY
 ## Login Page
 ![alt text](image.png)
 
+## Signup Page
+![alt text](image-5.png)
+
 ## Admin Dashboard
 ![alt text](image-1.png)
 ![alt text](image-2.png)
