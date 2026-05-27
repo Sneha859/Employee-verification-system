@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.user-container {
+
+  min-height: 100vh;
+
+  background: #f4f7fc;
+
+  padding: 40px;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* TOPBAR */
+
+.topbar {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 40px;
+}
+
+.topbar h1 {
+
+  color: #1e3c72;
+
+  font-size: 42px;
+
+  font-weight: bold;
+}
+
+.subtitle {
+
+  margin-top: 8px;
+
+  color: #666;
+
+  font-size: 16px;
+}
+
+
+
+/* LOGOUT BUTTON */
+
+.logout-btn {
+
+  padding: 12px 24px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #1e3c72;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.logout-btn:hover {
+
+  background: #16315c;
+
+  transform: translateY(-2px);
+}
+
+
+
+/* WELCOME CARD */
+
+.welcome-card {
+
+  background: linear-gradient(
+    135deg,
+    #1e3c72,
+    #2a5298
+  );
+
+  color: white;
+
+  padding: 35px;
+
+  border-radius: 25px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 35px;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.15);
+}
+
+.welcome-card h2 {
+
+  font-size: 32px;
+
+  margin-bottom: 10px;
+}
+
+.welcome-card p {
+
+  font-size: 18px;
+
+  opacity: 0.9;
+}
+
+.welcome-badge span {
+
+  background: rgba(255,255,255,0.2);
+
+  padding: 12px 24px;
+
+  border-radius: 30px;
+
+  font-size: 16px;
+
+  font-weight: bold;
+}
+
+
+
+/* DETAILS GRID */
+
+.details-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 25px;
+
+  margin-bottom: 35px;
+}
+
+
+
+/* DETAIL CARD */
+
+.detail-card {
+
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 5px 15px rgba(0,0,0,0.08);
+
+  transition: 0.3s ease;
+}
+
+.detail-card:hover {
+
+  transform: translateY(-5px);
+}
+
+.detail-card h3 {
+
+  color: #1e3c72;
+
+  margin-bottom: 15px;
+
+  font-size: 20px;
+}
+
+.detail-card p {
+
+  color: #444;
+
+  font-size: 18px;
+
+  font-weight: 500;
+}
+
+
+
+/* STATUS CARD */
+
+.status-card {
+
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 5px 15px rgba(0,0,0,0.08);
+}
+
+.status-card h3 {
+
+  color: #1e3c72;
+
+  margin-bottom: 20px;
+
+  font-size: 24px;
+}
+
+
+
+/* STATUS BADGES */
+
+.pending,
+.verified {
+
+  display: inline-block;
+
+  padding: 12px 24px;
+
+  border-radius: 30px;
+
+  font-weight: bold;
+
+  font-size: 16px;
+}
+
+.pending {
+
+  background: #fff3cd;
+
+  color: #856404;
+}
+
+.verified {
+
+  background: #d4edda;
+
+  color: #155724;
+}

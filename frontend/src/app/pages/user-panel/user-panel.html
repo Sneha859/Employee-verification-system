@@ -1,0 +1,106 @@
+<div class="user-container">
+
+  <!-- TOPBAR -->
+
+  <div class="topbar">
+
+    <div>
+      <h1>User Dashboard</h1>
+
+      <p class="subtitle">
+        Employee Verification Portal
+      </p>
+    </div>
+
+    <button class="logout-btn" (click)="logout()">
+      Logout
+    </button>
+
+  </div>
+
+
+
+  <!-- WELCOME CARD -->
+
+  <div class="welcome-card">
+
+    <div class="welcome-left">
+
+      <h2>
+        Welcome {{ user?.name }} 👋
+      </h2>
+
+      <p>
+        Your employee verification account is active.
+      </p>
+
+    </div>
+
+    <div class="welcome-badge">
+
+      <span>
+        {{ user?.role }}
+      </span>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- USER DETAILS -->
+
+  <div class="details-grid">
+
+    <div class="detail-card">
+
+      <h3>Email</h3>
+
+      <p>{{ user?.email }}</p>
+
+    </div>
+
+    <div class="detail-card">
+
+      <h3>Role</h3>
+
+      <p>{{ user?.role }}</p>
+
+    </div>
+
+    <div class="detail-card">
+
+      <h3>Company</h3>
+
+      <p>{{ user?.company }}</p>
+
+    </div>
+
+    <div class="detail-card">
+
+      <h3>Designation</h3>
+
+      <p>{{ user?.designation }}</p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- STATUS CARD -->
+
+  <div class="status-card">
+
+    <h3>Verification Status</h3>
+
+    <p
+      [ngClass]="user?.verified ? 'verified' : 'pending'">
+
+      {{ user?.verified ? 'Verified' : 'Pending Verification' }}
+
+    </p>
+
+  </div>
+
+</div>

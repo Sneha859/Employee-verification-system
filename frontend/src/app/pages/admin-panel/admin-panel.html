@@ -1,0 +1,191 @@
+<div class="admin-container">
+
+  <h1>Admin Dashboard</h1>
+
+
+
+  <!-- ADD USER -->
+
+  <div class="add-user-card">
+
+    <h2>Add User</h2>
+
+    <div class="form-grid">
+
+      <input
+        type="text"
+        placeholder="Name"
+        [(ngModel)]="newUser.name">
+
+      <input
+        type="email"
+        placeholder="Email"
+        [(ngModel)]="newUser.email">
+
+      <input
+        type="password"
+        placeholder="Password"
+        [(ngModel)]="newUser.password">
+
+      <select [(ngModel)]="newUser.role">
+
+        <option value="General User">
+          General User
+        </option>
+
+        <option value="Admin">
+          Admin
+        </option>
+
+      </select>
+
+    </div>
+
+    <button
+      class="add-btn"
+      (click)="addUser()">
+
+      Add User
+
+    </button>
+
+  </div>
+
+
+
+  <!-- SEARCH -->
+
+  <div class="search-container">
+
+    <input
+      type="text"
+      placeholder="Search User"
+      [(ngModel)]="searchText"
+      (input)="searchUser()">
+
+  </div>
+
+
+
+  <!-- DASHBOARD CARDS -->
+
+  <div class="card-grid">
+
+    <div class="dashboard-card">
+
+      <h2>Total Users</h2>
+
+      <p>{{ totalUsers }}</p>
+
+    </div>
+
+    <div class="dashboard-card">
+
+      <h2>Verified</h2>
+
+      <p>{{ verifiedUsers }}</p>
+
+    </div>
+
+    <div class="dashboard-card">
+
+      <h2>Pending</h2>
+
+      <p>{{ pendingUsers }}</p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- LOADING -->
+
+  <div
+    class="loading-container"
+    *ngIf="isLoading">
+
+    <div class="spinner"></div>
+
+    <p>Loading Users...</p>
+
+  </div>
+
+
+
+  <!-- TABLE -->
+
+  <table *ngIf="!isLoading">
+
+    <thead>
+
+      <tr>
+
+        <th>Name</th>
+
+        <th>Email</th>
+
+        <th>Role</th>
+
+        <th>Status</th>
+
+        <th>Verify</th>
+
+        <th>Delete</th>
+
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor="let user of filteredUsers">
+
+        <td>{{ user.name }}</td>
+
+        <td>{{ user.email }}</td>
+
+        <td>{{ user.role }}</td>
+
+        <td>
+
+          <span
+            [ngClass]="user.verified ? 'verified' : 'pending'">
+
+            {{ user.verified ? 'Verified' : 'Pending' }}
+
+          </span>
+
+        </td>
+
+        <td>
+
+          <button
+            class="verify-btn"
+            (click)="verifyUser(user._id)">
+
+            {{ user.verified ? 'Unverify' : 'Verify' }}
+
+          </button>
+
+        </td>
+
+        <td>
+
+          <button
+            class="delete-btn"
+            (click)="deleteUser(user._id)">
+
+            Delete
+
+          </button>
+
+        </td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
